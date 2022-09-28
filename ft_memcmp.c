@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wluedara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wluedara <Warintorn_L@outlook.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 13:10:48 by wluedara          #+#    #+#             */
-/*   Updated: 2022/08/29 14:11:38 by wluedara         ###   ########.fr       */
+/*   Updated: 2022/09/27 23:08:19 by wluedara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
@@ -30,14 +31,3 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	printf("%d\n", ft_memcmp("", "test", 4));
-	printf("ori: %d\n", memcmp("", "test", 4));
-	printf("%d\n", ft_memcmp("test", "", 4));
-	printf("ori: %d\n", memcmp("test", "", 4));
-	return (0);
-}*/

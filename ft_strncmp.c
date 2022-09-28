@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wluedara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wluedara <Warintorn_L@outlook.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 13:09:28 by wluedara          #+#    #+#             */
-/*   Updated: 2022/08/29 14:14:13 by wluedara         ###   ########.fr       */
+/*   Updated: 2022/09/27 23:09:25 by wluedara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
@@ -26,16 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char	s1[6] = "aab";
-	char	s2[6] = "aab";
-	int	n;
-
-	n = 5;
-	printf("%d\n", ft_strncmp(s1, s2, n));
-	printf("%d\n", strncmp(s1, s2, n));
-}*/

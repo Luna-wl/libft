@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wluedara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wluedara <Warintorn_L@outlook.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 13:03:14 by wluedara          #+#    #+#             */
-/*   Updated: 2022/09/03 23:23:09 by wluedara         ###   ########.fr       */
+/*   Updated: 2022/09/27 23:08:30 by wluedara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *str1, const void *str2, size_t n)
@@ -34,14 +35,3 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 	}
 	return (str1);
 }
-/*#include <stdio.h>
-int main(void)
-{
-	char str1[50];
-	char str2[50] = "mahmudul hasan";
-	char *ret;
-
-	ret = ft_memmove(str1, str2, 11);
-	printf("%s", ret);
-	return (0);
-}*/

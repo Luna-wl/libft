@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wluedara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wluedara <Warintorn_L@outlook.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 16:48:22 by wluedara          #+#    #+#             */
-/*   Updated: 2022/08/31 22:14:17 by wluedara         ###   ########.fr       */
+/*   Updated: 2022/09/27 23:07:01 by wluedara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 long	len(long n)
@@ -58,11 +59,3 @@ char	*ft_itoa(int n)
 	}
 	return (num);
 }
-/*#include <stdio.h>
-int main()
-{
- 	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(9874341));
-	printf("%s\n", ft_itoa(-12345));
-    return 0;
-}*/

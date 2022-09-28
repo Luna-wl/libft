@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wluedara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wluedara <Warintorn_L@outlook.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 14:35:53 by wluedara          #+#    #+#             */
-/*   Updated: 2022/08/29 16:20:58 by wluedara         ###   ########.fr       */
+/*   Updated: 2022/09/27 22:26:16 by wluedara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -17,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	len_d;
 	size_t	len_s;
 
+	if (!dst && size == 0)
+		return (0);
 	len_d = ft_strlen(dst);
 	len_s = ft_strlen((char *)src);
 	if (len_d >= size)
@@ -32,18 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[len_d + i] = '\0';
 	return (len_s + len_d);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char		dest[30];
-	char		src[1] = "";
-
-	size_t	size = 0;
-	//printf("dest: %s\nsrc: %s\n", dest, src);
-	//printf("ori: %lu\n", strlcat(dest, src, size));
-	ft_memset(dest, 0, 30);
-	puts(dest);
-    printf("new: %zu\n", ft_strlcat(dest, src, size));
-}*/

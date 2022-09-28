@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wluedara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wluedara <Warintorn_L@outlook.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 13:06:10 by wluedara          #+#    #+#             */
-/*   Updated: 2022/08/29 16:21:11 by wluedara         ###   ########.fr       */
+/*   Updated: 2022/09/27 23:09:14 by wluedara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
@@ -31,13 +32,3 @@ unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 	}
 	return (x);
 }
-/*
-int	main()
-{
-	char	dest[10];
-	char	src[] = "Hello";
-	unsigned int	size = 5;
-
-	printf("%d\n", ft_strlcpy(dest, src, size));
-	printf("%s\n", dest);
-}*/

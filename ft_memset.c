@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wluedara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wluedara <Warintorn_L@outlook.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:05:25 by wluedara          #+#    #+#             */
-/*   Updated: 2022/08/29 14:12:26 by wluedara         ###   ########.fr       */
+/*   Updated: 2022/09/27 23:08:36 by wluedara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memset(void *dest, int c, size_t len)
@@ -23,17 +24,5 @@ void	*ft_memset(void *dest, int c, size_t len)
 		new[i] = (char)c;
 		i++;
 	}
-	return (dest);
+	return (new);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char	str[50];
-	strcpy(str, "This is string.h library function");
-	puts(str);
-	ft_memset(str, 0, 5);
-	puts(str);
-	return (0);
-}*/

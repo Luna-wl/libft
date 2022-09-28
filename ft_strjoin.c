@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wluedara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wluedara <Warintorn_L@outlook.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 18:02:59 by wluedara          #+#    #+#             */
-/*   Updated: 2022/08/31 15:12:15 by wluedara         ###   ########.fr       */
+/*   Updated: 2022/09/27 23:09:08 by wluedara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -39,12 +40,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new[i] = '\0';
 	return (new);
 }
-/*
-int	main()
-{
-	char *str;
-
-	str = ft_strjoin( "da", 0);
-	printf("%s\n", str);
-	return (0);
-}*/

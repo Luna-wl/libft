@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wluedara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wluedara <Warintorn_L@outlook.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 11:32:36 by wluedara          #+#    #+#             */
-/*   Updated: 2022/08/29 14:09:51 by wluedara         ###   ########.fr       */
+/*   Updated: 2022/09/27 23:07:40 by wluedara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_isalnum(int c)
@@ -19,11 +20,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	char c = 5;
-	printf("%d", ft_isalnum(c));
-	return (0);
-}*/

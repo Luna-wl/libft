@@ -3,15 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wluedara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wluedara <Warintorn_L@outlook.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 16:27:33 by wluedara          #+#    #+#             */
-/*   Updated: 2022/08/31 16:48:08 by wluedara         ###   ########.fr       */
+/*   Updated: 2022/09/28 18:03:32 by wluedara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	check_word(char const *s, char c)
+static void	free_split(char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+}
+
+static int	check_word(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -24,7 +38,7 @@ int	check_word(char const *s, char c)
 	{
 		if (s[i] != c && s[i])
 		{
-			while (s[i] != c)
+			while (s[i] != c && s[i])
 				i++;
 			count++;
 		}
@@ -34,7 +48,7 @@ int	check_word(char const *s, char c)
 	return (count);
 }
 
-int	count_letter(char const *s, char c)
+static int	count_letter(char const *s, char c)
 {
 	char	*s1;
 	int		i;
@@ -45,13 +59,11 @@ int	count_letter(char const *s, char c)
 	{
 		if (s1[i] != c)
 			i++;
-		if (s1[i] == c)
-			return (i);
 	}
-	return (0);
+	return (i);
 }
 
-char	*split(char const *s, char c)
+static char	*my_split(char const *s, char c, char **new)
 {
 	char	*str;
 	int		letter;
@@ -60,6 +72,11 @@ char	*split(char const *s, char c)
 
 	letter = count_letter(s, c);
 	str = (char *)malloc(sizeof(char) * (letter + 1));
+	if (!str)
+	{
+		free_split(new);
+		return (0);
+	}
 	i = 0;
 	j = 0;
 	while (s[j] != 0 && s[j] != c)
@@ -87,27 +104,11 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[j] == c && s[j] != '\0')
 			j++;
-		new[i++] = split(&s[j], c);
+		new[i] = my_split(&s[j], c, new);
+		if (new[i++])
+			return (0);
 		j += count_letter(&s[j], c);
 	}
 	new[i] = 0;
 	return (new);
-}
-
-// #include <malloc/malloc.h>
-int main()
-{
-	int i = 0;
-	char **tab;
-		
-	tab = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'z');
-	// printf("%zu\n", malloc_size(tab));
-	while (tab[i])
-	{
-		printf("string %d : %s\n", i, tab[i]);
-		i++;
-	}
-	printf("string %d : %s\n", i, tab[i]);
-   //printf("word = %d\n", check_word("   bonjour   je  m'appel Arthur   ", ' '));
-	return (0);
 }
